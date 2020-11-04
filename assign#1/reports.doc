@@ -1,0 +1,1206 @@
+1.ProductNNumbers
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="/tmp/codecheck/20110420395794238432215237432"/>
+<meta name="Time" content="2020-11-04T20:39:45Z"/>
+<meta name="ID" content="ProductNNumbers"/>
+<meta name="User" content="20102919081l3i7nngnqqqcgvfczpt0tylq"/>
+<meta name="Problem" content="ext/20052102556xn6t86wdgm988l6mow1gwua9"/>
+<meta name="Elapsed" content="1147 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {5}</pre></td>
+<td><pre>5.0</pre></td>
+<td><pre>5.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {5, 5}</pre></td>
+<td><pre>25.0</pre></td>
+<td><pre>25.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {-5, 5}</pre></td>
+<td><pre>-25.0</pre></td>
+<td><pre>-25.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {-5, -5}</pre></td>
+<td><pre>25.0</pre></td>
+<td><pre>25.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {3, 3, 0}</pre></td>
+<td><pre>0.0</pre></td>
+<td><pre>0.0</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">ProductNNumbers.java:</p>
+<table class="file"><tr><td><pre><span class="linenumber">  1</span>
+<span class="linenumber">  2</span>
+<span class="linenumber">  3</span>
+<span class="linenumber">  4</span>
+<span class="linenumber">  5</span>
+<span class="linenumber">  6</span>
+<span class="linenumber">  7</span>
+<span class="linenumber">  8</span>
+<span class="linenumber">  9</span>
+<span class="linenumber"> 10</span>
+<span class="linenumber"> 11</span>
+<span class="linenumber"> 12</span>
+<span class="linenumber"> 13</span>
+<span class="linenumber"> 14</span>
+<span class="linenumber"> 15</span>
+<span class="linenumber"> 16</span>
+<span class="linenumber"> 17</span>
+<span class="linenumber"> 18</span>
+<span class="linenumber"> 19</span>
+<span class="linenumber"> 20</span>
+<span class="linenumber"> 21</span>
+<span class="linenumber"> 22</span>
+<span class="linenumber"> 23</span>
+<span class="linenumber"> 24</span>
+<span class="linenumber"> 25</span>
+<span class="linenumber"> 26</span>
+<span class="linenumber"> 27</span>
+<span class="linenumber"> 28</span>
+<span class="linenumber"> 29</span>
+<span class="linenumber"> 30</span>
+<span class="linenumber"> 31</span>
+<span class="linenumber"> 32</span>
+<span class="linenumber"> 33</span>
+</pre></td><td><pre>/*******************************************************
+ *                                                     * 
+ * PROBLEM:                                            *
+ *                                                     *
+ * Complete the design of the function called product  *
+ * that consumes n double numbers and produces the     *
+ * product of those numbers.                           *
+ *                                                     *
+ * @required the Java "for" loop                       *
+ *                                                     *
+ * see examples wrapped in check-expect.               *
+ *  -with the form: @check_expect (({in}) -&gt; (out))    *
+ *                                                     *
+ * @author Henrique Rebelo                             *
+ *******************************************************/
+public class ProductNNumbers {
+	
+  /**
+   * Examples:
+   * @check_expect (({new double[] {5}})       -&gt; (5.0))
+   * @check_expect (({new double[] {5, 5}})    -&gt; (25.0))
+   * @check_expect (({new double[] {-5, 5}})   -&gt; (-25.0))
+   * @check_expect (({new double[] {-5, -5}})  -&gt; (25.0))
+   * @check_expect (({new double[] {3, 3, 0}}) -&gt; (0.0))
+   */  
+  public static double product(double [] numbers) {
+    double product = 1;
+    for (int i = 0; i &lt; numbers.length; i++) {
+       product *= numbers[i];
+    }
+    return product;
+  }
+}
+</pre></td></tr></table>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">5/5</p>
+</div>
+<div class="footnotes"><div class="footnote">2020-11-04T20:39:45Z</div>
+</div>
+</body></html>
+
+----------------------------------------------------------------------------------------------------------------------------
+2.ProductNNumbers2
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="/tmp/codecheck/20110420412962927841947996092"/>
+<meta name="Time" content="2020-11-04T20:41:38Z"/>
+<meta name="ID" content="ProductNNumbers2"/>
+<meta name="User" content="20102919081l3i7nngnqqqcgvfczpt0tylq"/>
+<meta name="Problem" content="ext/2005210255c8z77j0d3ai96x6zdfsoh2h4d"/>
+<meta name="Elapsed" content="1981 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {5}</pre></td>
+<td><pre>5.0</pre></td>
+<td><pre>5.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {5, 5}</pre></td>
+<td><pre>25.0</pre></td>
+<td><pre>25.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {-5, 5}</pre></td>
+<td><pre>-25.0</pre></td>
+<td><pre>-25.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {-5, -5}</pre></td>
+<td><pre>25.0</pre></td>
+<td><pre>25.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>new double[] {3, 3, 0}</pre></td>
+<td><pre>0.0</pre></td>
+<td><pre>0.0</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">ProductNNumbers2.java:</p>
+<table class="file"><tr><td><pre><span class="linenumber">  1</span>
+<span class="linenumber">  2</span>
+<span class="linenumber">  3</span>
+<span class="linenumber">  4</span>
+<span class="linenumber">  5</span>
+<span class="linenumber">  6</span>
+<span class="linenumber">  7</span>
+<span class="linenumber">  8</span>
+<span class="linenumber">  9</span>
+<span class="linenumber"> 10</span>
+<span class="linenumber"> 11</span>
+<span class="linenumber"> 12</span>
+<span class="linenumber"> 13</span>
+<span class="linenumber"> 14</span>
+<span class="linenumber"> 15</span>
+<span class="linenumber"> 16</span>
+<span class="linenumber"> 17</span>
+<span class="linenumber"> 18</span>
+<span class="linenumber"> 19</span>
+<span class="linenumber"> 20</span>
+<span class="linenumber"> 21</span>
+<span class="linenumber"> 22</span>
+<span class="linenumber"> 23</span>
+<span class="linenumber"> 24</span>
+<span class="linenumber"> 25</span>
+<span class="linenumber"> 26</span>
+<span class="linenumber"> 27</span>
+<span class="linenumber"> 28</span>
+<span class="linenumber"> 29</span>
+<span class="linenumber"> 30</span>
+<span class="linenumber"> 31</span>
+<span class="linenumber"> 32</span>
+<span class="linenumber"> 33</span>
+<span class="linenumber"> 34</span>
+<span class="linenumber"> 35</span>
+</pre></td><td><pre>/*******************************************************
+ *                                                     * 
+ * PROBLEM:                                            *
+ *                                                     *
+ * Complete the design of the function called product  *
+ * that consumes n double numbers and produces the     *
+ * product of those numbers.                           *
+ *                                                     *
+ * @required the Java "while" loop                     *
+ *                                                     *
+ * see examples wrapped in check-expect.               *
+ *  -with the form: @check_expect (({in}) -&gt; (out))    *
+ *                                                     *
+ * @author Henrique Rebelo                             *
+ *******************************************************/
+public class ProductNNumbers2 {
+	
+  /**
+   * Examples:
+   * @check_expect (({new double[] {5}})       -&gt; (5.0))
+   * @check_expect (({new double[] {5, 5}})    -&gt; (25.0))
+   * @check_expect (({new double[] {-5, 5}})   -&gt; (-25.0))
+   * @check_expect (({new double[] {-5, -5}})  -&gt; (25.0))
+   * @check_expect (({new double[] {3, 3, 0}}) -&gt; (0.0))
+   */  
+  public static double product(double [] numbers) {
+    double product = 1;
+    int i = 0; // aux. index for the while loop
+    while (i &lt; numbers.length) {
+       product *= numbers[i];
+       i++;
+    }
+    return product;
+  }
+}
+</pre></td></tr></table>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">5/5</p>
+</div>
+<div class="footnotes"><div class="footnote">2020-11-04T20:41:38Z</div>
+</div>
+</body></html>
+
+----------------------------------------------------------------------------------------------------------------------------
+3.ProductTwoNumbers
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="/tmp/codecheck/20110420352781161407949867471"/>
+<meta name="Time" content="2020-11-04T20:35:26Z"/>
+<meta name="ID" content="ProductTwoNumbers"/>
+<meta name="User" content="20102919081l3i7nngnqqqcgvfczpt0tylq"/>
+<meta name="Problem" content="ext/2005212440699tda72o6suv8zn9iawptxcs"/>
+<meta name="Elapsed" content="1091 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>2.0, 2.0</pre></td>
+<td><pre>4.0</pre></td>
+<td><pre>4.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>2.0, 0.0</pre></td>
+<td><pre>0.0</pre></td>
+<td><pre>0.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>2.0, 1.0</pre></td>
+<td><pre>2.0</pre></td>
+<td><pre>2.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>2.0, -1.0</pre></td>
+<td><pre>-2.0</pre></td>
+<td><pre>-2.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>product</pre></td>
+<td><pre>-2.0, -1.0</pre></td>
+<td><pre>2.0</pre></td>
+<td><pre>2.0</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">ProductTwoNumbers.java:</p>
+<table class="file"><tr><td><pre><span class="linenumber">  1</span>
+<span class="linenumber">  2</span>
+<span class="linenumber">  3</span>
+<span class="linenumber">  4</span>
+<span class="linenumber">  5</span>
+<span class="linenumber">  6</span>
+<span class="linenumber">  7</span>
+<span class="linenumber">  8</span>
+<span class="linenumber">  9</span>
+<span class="linenumber"> 10</span>
+<span class="linenumber"> 11</span>
+<span class="linenumber"> 12</span>
+<span class="linenumber"> 13</span>
+<span class="linenumber"> 14</span>
+<span class="linenumber"> 15</span>
+<span class="linenumber"> 16</span>
+<span class="linenumber"> 17</span>
+<span class="linenumber"> 18</span>
+<span class="linenumber"> 19</span>
+<span class="linenumber"> 20</span>
+<span class="linenumber"> 21</span>
+<span class="linenumber"> 22</span>
+<span class="linenumber"> 23</span>
+<span class="linenumber"> 24</span>
+<span class="linenumber"> 25</span>
+<span class="linenumber"> 26</span>
+<span class="linenumber"> 27</span>
+</pre></td><td><pre>/*******************************************************
+ *                                                     * 
+ * PROBLEM:                                            *
+ *                                                     *
+ * Complete the design of the function called product  *
+ * that consumes two double numbers and produces the   *
+ * product of those numbers.                           *
+ *                                                     *
+ * see examples wrapped in check-expect.               *
+ *  -with the form: @check_expect (({in}) -&gt; (out))    *
+ *                                                     *
+ * @author Henrique Rebelo                             *
+ *******************************************************/
+public class ProductTwoNumbers {
+	
+  /**
+   * Examples:
+   * @check_expect (({2.0, 2.0})   -&gt; (4.0))
+   * @check_expect (({2.0, 0.0})   -&gt; (0.0))
+   * @check_expect (({2.0, 1.0})   -&gt; (2.0))
+   * @check_expect (({2.0, -1.0})  -&gt; (-2.0))
+   * @check_expect (({-2.0, -1.0}) -&gt; (2.0))
+   */  
+  public static double product(double x, double y) {
+   return x * y;
+  }
+}
+</pre></td></tr></table>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">5/5</p>
+</div>
+<div class="footnotes"><div class="footnote">2020-11-04T20:35:26Z</div>
+</div>
+</body></html>
+
+----------------------------------------------------------------------------------------------------------------------------
+4.Rainfall
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="/tmp/codecheck/20110421041184315047333578728"/>
+<meta name="Time" content="2020-11-04T21:04:07Z"/>
+<meta name="ID" content="Rainfall"/>
+<meta name="User" content="20102919081l3i7nngnqqqcgvfczpt0tylq"/>
+<meta name="Problem" content="ext/2005210250aox045y5asqr7eh457ga7rtsg"/>
+<meta name="Elapsed" content="2169 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 1, 2, 3, 4, 5, 9999 }</pre></td>
+<td><pre>3.0</pre></td>
+<td><pre>3.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 1, 2, -3, 4, 5, 9999 }</pre></td>
+<td><pre>3.0</pre></td>
+<td><pre>3.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 1, 2, 3, 4, 5, 9999, 6, 7 }</pre></td>
+<td><pre>3.0</pre></td>
+<td><pre>3.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] {1, 2, 3, -4, 9999, 5}</pre></td>
+<td><pre>2.0</pre></td>
+<td><pre>2.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 10, 9999 }</pre></td>
+<td><pre>10.0</pre></td>
+<td><pre>10.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 10, 0, 9999 }</pre></td>
+<td><pre>5.0</pre></td>
+<td><pre>5.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { -1, -2, -3, 9999 }</pre></td>
+<td><pre>0.0</pre></td>
+<td><pre>0.0</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>averageRainfall</pre></td>
+<td><pre>new double[] { 9999 }</pre></td>
+<td><pre>0.0</pre></td>
+<td><pre>0.0</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">Rainfall.java:</p>
+<table class="file"><tr><td><pre><span class="linenumber">  1</span>
+<span class="linenumber">  2</span>
+<span class="linenumber">  3</span>
+<span class="linenumber">  4</span>
+<span class="linenumber">  5</span>
+<span class="linenumber">  6</span>
+<span class="linenumber">  7</span>
+<span class="linenumber">  8</span>
+<span class="linenumber">  9</span>
+<span class="linenumber"> 10</span>
+<span class="linenumber"> 11</span>
+<span class="linenumber"> 12</span>
+<span class="linenumber"> 13</span>
+<span class="linenumber"> 14</span>
+<span class="linenumber"> 15</span>
+<span class="linenumber"> 16</span>
+<span class="linenumber"> 17</span>
+<span class="linenumber"> 18</span>
+<span class="linenumber"> 19</span>
+<span class="linenumber"> 20</span>
+<span class="linenumber"> 21</span>
+<span class="linenumber"> 22</span>
+<span class="linenumber"> 23</span>
+<span class="linenumber"> 24</span>
+<span class="linenumber"> 25</span>
+<span class="linenumber"> 26</span>
+<span class="linenumber"> 27</span>
+<span class="linenumber"> 28</span>
+<span class="linenumber"> 29</span>
+<span class="linenumber"> 30</span>
+<span class="linenumber"> 31</span>
+<span class="linenumber"> 32</span>
+<span class="linenumber"> 33</span>
+<span class="linenumber"> 34</span>
+<span class="linenumber"> 35</span>
+<span class="linenumber"> 36</span>
+<span class="linenumber"> 37</span>
+<span class="linenumber"> 38</span>
+<span class="linenumber"> 39</span>
+<span class="linenumber"> 40</span>
+<span class="linenumber"> 41</span>
+<span class="linenumber"> 42</span>
+<span class="linenumber"> 43</span>
+<span class="linenumber"> 44</span>
+<span class="linenumber"> 45</span>
+</pre></td><td><pre>/********************************************************
+ *                                                      * 
+ * PROBLEM:                                             *
+ *                                                      *
+ * Complete the design of the function called           *
+ * averagerainfall that consumes an array of double     *
+ * and produces the average, but ignore negative values *
+ * (which must have been measurement errors), and stop  *
+ * when you reach the sentinel 9999.                    *
+ *                                                      *
+ * see examples wrapped in check-expect.                *
+ *  -with the form: @check_expect (({in}) -&gt; (out))     *
+ *                                                      *
+ * @author Henrique Rebelo                              *
+ ********************************************************/
+public class Rainfall {
+  /**
+	 * Examples:
+	 * @check_expect (({new double[] {1, 2, 3, 4, 5, 9999}})       -&gt; (3.0))
+	 * @check_expect (({new double[] {1, 2, -3, 4, 5, 9999}})      -&gt; (3.0))
+	 * @check_expect (({new double[] {1, 2, 3, 4, 5, 9999, 6, 7}}) -&gt; (3.0))
+	 * @check_expect (({new double[] {1, 2, 3, -4, 9999, 5}})      -&gt; (2.0))
+	 * @check_expect (({new double[] {10, 9999}})                  -&gt; (10.0))
+	 * @check_expect (({new double[] {10, 0, 9999}})               -&gt; (5.0))
+	 * @check_expect (({new double[] {-1, -2, -3, 9999}})          -&gt; (0.0))
+	 * @check_expect (({new double[] {9999}})                      -&gt; (0.0))
+	 */  
+   public static double averageRainfall(double[] rainfall) {
+      double sum = 0;
+      int i = 0;
+      int count = 0;
+      while(i &lt; rainfall.length) {
+         double curr = rainfall[i];
+         if (curr == 9999)
+            break;
+         
+         if (curr &gt;= 0){
+            count++;
+            sum +=curr;
+         }
+         i++;
+      }
+      return (count != 0)? sum/count : 0.0;
+  }
+}
+</pre></td></tr></table>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">8/8</p>
+</div>
+<div class="footnotes"><div class="footnote">2020-11-04T21:04:07Z</div>
+</div>
+</body></html>
+
+----------------------------------------------------------------------------------------------------------------------------
+5.StringReverseOrder
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="/tmp/codecheck/2011042130134156820618038468"/>
+<meta name="Time" content="2020-11-04T21:30:54Z"/>
+<meta name="ID" content="StringReverseOrder"/>
+<meta name="User" content="20102919081l3i7nngnqqqcgvfczpt0tylq"/>
+<meta name="Problem" content="ext/2005210439dvi6xm9f6s0pq648hnajgo1o7"/>
+<meta name="Elapsed" content="1054 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getStringInReverseOrder</pre></td>
+<td><pre>new String("Java")</pre></td>
+<td><pre>avaJ</pre></td>
+<td><pre>avaJ</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getStringInReverseOrder</pre></td>
+<td><pre>new String("String")</pre></td>
+<td><pre>gnirtS</pre></td>
+<td><pre>gnirtS</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getStringInReverseOrder</pre></td>
+<td><pre>new String("12345678910")</pre></td>
+<td><pre>01987654321</pre></td>
+<td><pre>01987654321</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">StringReverseOrder.java:</p>
+<table class="file"><tr><td><pre><span class="linenumber">  1</span>
+<span class="linenumber">  2</span>
+<span class="linenumber">  3</span>
+<span class="linenumber">  4</span>
+<span class="linenumber">  5</span>
+<span class="linenumber">  6</span>
+<span class="linenumber">  7</span>
+<span class="linenumber">  8</span>
+<span class="linenumber">  9</span>
+<span class="linenumber"> 10</span>
+<span class="linenumber"> 11</span>
+<span class="linenumber"> 12</span>
+<span class="linenumber"> 13</span>
+<span class="linenumber"> 14</span>
+<span class="linenumber"> 15</span>
+<span class="linenumber"> 16</span>
+<span class="linenumber"> 17</span>
+<span class="linenumber"> 18</span>
+<span class="linenumber"> 19</span>
+<span class="linenumber"> 20</span>
+<span class="linenumber"> 21</span>
+<span class="linenumber"> 22</span>
+<span class="linenumber"> 23</span>
+<span class="linenumber"> 24</span>
+<span class="linenumber"> 25</span>
+<span class="linenumber"> 26</span>
+<span class="linenumber"> 27</span>
+<span class="linenumber"> 28</span>
+<span class="linenumber"> 29</span>
+<span class="linenumber"> 30</span>
+</pre></td><td><pre>/*******************************************************
+ *                                                     * 
+ * PROBLEM:                                            *
+ *                                                     *
+ * Complete the design of the function called          *
+ * getStringInReverseOrder that consumes a String      *
+ * and produces it in a reverse order.                 *
+ *                                                     *
+ * see examples wrapped in check-expect.               *
+ *  -with the form: @check_expect (({in}) -&gt; (out))    *
+ *                                                     *
+ * @author Henrique Rebelo                             *
+ *******************************************************/
+public class StringReverseOrder {
+	
+	/**
+	 * Examples:
+	 * @check_expect (({"Java"})        -&gt; ("avaJ"))
+	 * @check_expect (({"String"})      -&gt; ("gnirtS"))
+	 * @check_expect (({"12345678910"}) -&gt; ("01987654321"))
+	 */  
+	public static String getStringInReverseOrder(String s) {
+		int size = s.length() -1;
+		StringBuilder output = new StringBuilder();
+		for(int i = size; i &gt;= 0; i--) {
+		   output.append(s.charAt(i));
+		}
+		return output.toString();
+	}
+}
+</pre></td></tr></table>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">3/3</p>
+</div>
+<div class="footnotes"><div class="footnote">2020-11-04T21:30:54Z</div>
+</div>
+</body></html>
+
+----------------------------------------------------------------------------------------------------------------------------
+6.StudentGradesAscendingOrder
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="/tmp/codecheck/20110421144474555152640622045"/>
+<meta name="Time" content="2020-11-04T21:14:55Z"/>
+<meta name="ID" content="StudentGradesAscendingOrder"/>
+<meta name="User" content="20102919081l3i7nngnqqqcgvfczpt0tylq"/>
+<meta name="Problem" content="ext/20052104225ghjsrlr64k6vfim194fbwusm"/>
+<meta name="Elapsed" content="2156 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {10}</pre></td>
+<td><pre>[10.0]</pre></td>
+<td><pre>[10.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {10, 0}</pre></td>
+<td><pre>[0.0, 10.0]</pre></td>
+<td><pre>[0.0, 10.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {10, 9, 8, 2}</pre></td>
+<td><pre>[2.0, 8.0, 9.0, 10.0]</pre></td>
+<td><pre>[2.0, 8.0, 9.0, 10.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {5, 9, 1, 2, 3}</pre></td>
+<td><pre>[1.0, 2.0, 3.0, 5.0, 9.0]</pre></td>
+<td><pre>[1.0, 2.0, 3.0, 5.0, 9.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInAscendingOrder</pre></td>
+<td><pre>new double [] {10, 9, 10, 1, 2, 1}</pre></td>
+<td><pre>[1.0, 1.0, 2.0, 9.0, 10.0, 10.0]</pre></td>
+<td><pre>[1.0, 1.0, 2.0, 9.0, 10.0, 10.0]</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">StudentGradesAscendingOrder.java:</p>
+<table class="file"><tr><td><pre><span class="linenumber">  1</span>
+<span class="linenumber">  2</span>
+<span class="linenumber">  3</span>
+<span class="linenumber">  4</span>
+<span class="linenumber">  5</span>
+<span class="linenumber">  6</span>
+<span class="linenumber">  7</span>
+<span class="linenumber">  8</span>
+<span class="linenumber">  9</span>
+<span class="linenumber"> 10</span>
+<span class="linenumber"> 11</span>
+<span class="linenumber"> 12</span>
+<span class="linenumber"> 13</span>
+<span class="linenumber"> 14</span>
+<span class="linenumber"> 15</span>
+<span class="linenumber"> 16</span>
+<span class="linenumber"> 17</span>
+<span class="linenumber"> 18</span>
+<span class="linenumber"> 19</span>
+<span class="linenumber"> 20</span>
+<span class="linenumber"> 21</span>
+<span class="linenumber"> 22</span>
+<span class="linenumber"> 23</span>
+<span class="linenumber"> 24</span>
+<span class="linenumber"> 25</span>
+<span class="linenumber"> 26</span>
+<span class="linenumber"> 27</span>
+<span class="linenumber"> 28</span>
+<span class="linenumber"> 29</span>
+</pre></td><td><pre>import java.util.*;
+
+/*******************************************************
+ *                                                     * 
+ * PROBLEM:                                            *
+ *                                                     *
+ * Complete the design of the function called          *
+ * getGradesInAscendingOrder that consumes an array of *
+ * grades and produces the grades in ascending order.  *
+ *                                                     *
+ * see examples wrapped in check-expect.               *
+ *  -with the form: @check_expect (({in}) -&gt; (out))    *
+ *                                                     *
+ * @author Henrique Rebelo                             *
+ *******************************************************/
+public class StudentGradesAscendingOrder {
+	/**
+	 * Examples:
+	 * @check_expect (({new double[] {10}})                 -&gt; (double[]{10}))
+	 * @check_expect (({new double[] {10, 0}})              -&gt; (double[]{0, 10}))
+	 * @check_expect (({new double[] {10, 9, 8, 2}})        -&gt; (double[]{2, 8, 9, 10}))
+	 * @check_expect (({new double[] {5, 9, 1, 2, 3}})      -&gt; (double[]{1, 2, 3, 5, 9}))
+	 * @check_expect (({new double[] {10, 9, 10, 1, 2, 1}}) -&gt; (double[]{1, 1, 2, 9, 10, 10}))
+	 */  
+	public static double [] getGradesInAscendingOrder(double [] grades) {
+		Arrays.sort(grades);
+		return grades;
+	}
+}
+</pre></td></tr></table>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">5/5</p>
+</div>
+<div class="footnotes"><div class="footnote">2020-11-04T21:14:55Z</div>
+</div>
+</body></html>
+
+----------------------------------------------------------------------------------------------------------------------------
+7.StudentGradesDescendingOrder
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="/tmp/codecheck/20110421225619054648158050770"/>
+<meta name="Time" content="2020-11-04T21:22:02Z"/>
+<meta name="ID" content="StudentGradesDescendingOrder"/>
+<meta name="User" content="20102919081l3i7nngnqqqcgvfczpt0tylq"/>
+<meta name="Problem" content="ext/20052104213t6l8ra5x2jx8tvb4nqbqgux6"/>
+<meta name="Elapsed" content="1296 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {10}</pre></td>
+<td><pre>[10.0]</pre></td>
+<td><pre>[10.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {0, 10}</pre></td>
+<td><pre>[10.0, 0.0]</pre></td>
+<td><pre>[10.0, 0.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {2, 8, 9, 10}</pre></td>
+<td><pre>[10.0, 9.0, 8.0, 2.0]</pre></td>
+<td><pre>[10.0, 9.0, 8.0, 2.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {5, 9, 1, 2, 3}</pre></td>
+<td><pre>[9.0, 5.0, 3.0, 2.0, 1.0]</pre></td>
+<td><pre>[9.0, 5.0, 3.0, 2.0, 1.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {10, 9, 10, 1, 2, 1}</pre></td>
+<td><pre>[10.0, 10.0, 9.0, 2.0, 1.0, 1.0]</pre></td>
+<td><pre>[10.0, 10.0, 9.0, 2.0, 1.0, 1.0]</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">StudentGradesDescendingOrder.java:</p>
+<table class="file"><tr><td><pre><span class="linenumber">  1</span>
+<span class="linenumber">  2</span>
+<span class="linenumber">  3</span>
+<span class="linenumber">  4</span>
+<span class="linenumber">  5</span>
+<span class="linenumber">  6</span>
+<span class="linenumber">  7</span>
+<span class="linenumber">  8</span>
+<span class="linenumber">  9</span>
+<span class="linenumber"> 10</span>
+<span class="linenumber"> 11</span>
+<span class="linenumber"> 12</span>
+<span class="linenumber"> 13</span>
+<span class="linenumber"> 14</span>
+<span class="linenumber"> 15</span>
+<span class="linenumber"> 16</span>
+<span class="linenumber"> 17</span>
+<span class="linenumber"> 18</span>
+<span class="linenumber"> 19</span>
+<span class="linenumber"> 20</span>
+<span class="linenumber"> 21</span>
+<span class="linenumber"> 22</span>
+<span class="linenumber"> 23</span>
+<span class="linenumber"> 24</span>
+<span class="linenumber"> 25</span>
+<span class="linenumber"> 26</span>
+<span class="linenumber"> 27</span>
+<span class="linenumber"> 28</span>
+<span class="linenumber"> 29</span>
+<span class="linenumber"> 30</span>
+<span class="linenumber"> 31</span>
+<span class="linenumber"> 32</span>
+<span class="linenumber"> 33</span>
+<span class="linenumber"> 34</span>
+<span class="linenumber"> 35</span>
+<span class="linenumber"> 36</span>
+<span class="linenumber"> 37</span>
+<span class="linenumber"> 38</span>
+<span class="linenumber"> 39</span>
+<span class="linenumber"> 40</span>
+<span class="linenumber"> 41</span>
+</pre></td><td><pre>import java.util.*;
+
+/********************************************************
+ *                                                      * 
+ * PROBLEM:                                             *
+ *                                                      *
+ * Complete the design of the function called           *
+ * getGradesInDescendingOrder that consumes an array of *
+ * grades and produces the grades in descending order.  *
+ *                                                      *
+ * see examples wrapped in check-expect.                *
+ *  -with the form: @check_expect (({in}) -&gt; (out))     *
+ *                                                      *
+ * @author Henrique Rebelo                              *
+ ********************************************************/
+public class StudentGradesDescendingOrder {
+    
+	/**
+	 * Examples:
+	 * @check_expect (({new double[] {10}})                 -&gt; (double[]{10}))
+	 * @check_expect (({new double[] {0, 10}})              -&gt; (double[]{10, 0}))
+	 * @check_expect (({new double[] {2, 8, 9, 10}})        -&gt; (double[]{10, 9, 8, 2}))
+	 * @check_expect (({new double[] {5, 9, 1, 2, 3}})      -&gt; (double[]{9, 5, 3, 2, 1}))
+	 * @check_expect (({new double[] {10, 9, 10, 1, 2, 1}}) -&gt; (double[]{10, 10, 9, 2, 1, 1}))
+	 */  
+	public static double [] getGradesInDescendingOrder(double [] grades) {
+	   // this should work:	Arrays.sort(grades, Collections.reverseOrder());
+      
+      // sort and reverse
+      Arrays.sort(grades);
+      int size = grades.length;
+      double temp; 
+      for (int i = 0; i &lt; size / 2; i++) { 
+         temp = grades[i]; 
+         grades[i] = grades[size - i - 1]; 
+         grades[size - i - 1] = temp; 
+      }
+      
+		return grades;
+	}
+}
+</pre></td></tr></table>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">5/5</p>
+</div>
+<div class="footnotes"><div class="footnote">2020-11-04T21:22:02Z</div>
+</div>
+</body></html>
+
+----------------------------------------------------------------------------------------------------------------------------
+8.SumNatural
+
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+<meta name="Submission" content="/tmp/codecheck/20110421225619054648158050770"/>
+<meta name="Time" content="2020-11-04T21:22:02Z"/>
+<meta name="ID" content="StudentGradesDescendingOrder"/>
+<meta name="User" content="20102919081l3i7nngnqqqcgvfczpt0tylq"/>
+<meta name="Problem" content="ext/20052104213t6l8ra5x2jx8tvb4nqbqgux6"/>
+<meta name="Elapsed" content="1296 ms"/>
+<style type="text/css">
+.header {font-weight: bold; font-size: 1.2em; }
+.item {font-weight: bold;}
+.pass {color: green;}
+.fail {color: red;}
+.note {color: blue; font-weight: bold;}
+table.file td {padding-right: 1em; background: #FFF; }
+.linenumber {color: gray;}
+.footnote {font-size: 0.7em;}
+table {font-size: 0.9em;}
+td, th { background: #EEE; margin: 0.5em; padding: 0.25em;}
+table.output td {vertical-align: top;}
+div.footnotes { border-top: 1px solid gray; padding-top: 0.5em; }
+</style>
+<title>Report</title>
+</head>
+<body>
+<p class="header call">Calling with Arguments</p>
+<div class="call">
+<table class="run">
+<tr><th>&#160;</th><th>Name</th><th>Arguments</th><th>Actual</th><th>Expected</th></tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {10}</pre></td>
+<td><pre>[10.0]</pre></td>
+<td><pre>[10.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {0, 10}</pre></td>
+<td><pre>[10.0, 0.0]</pre></td>
+<td><pre>[10.0, 0.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {2, 8, 9, 10}</pre></td>
+<td><pre>[10.0, 9.0, 8.0, 2.0]</pre></td>
+<td><pre>[10.0, 9.0, 8.0, 2.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {5, 9, 1, 2, 3}</pre></td>
+<td><pre>[9.0, 5.0, 3.0, 2.0, 1.0]</pre></td>
+<td><pre>[9.0, 5.0, 3.0, 2.0, 1.0]</pre></td>
+</tr>
+<tr><td><span class="pass">pass </span></td>
+<td><pre>getGradesInDescendingOrder</pre></td>
+<td><pre>new double [] {10, 9, 10, 1, 2, 1}</pre></td>
+<td><pre>[10.0, 10.0, 9.0, 2.0, 1.0, 1.0]</pre></td>
+<td><pre>[10.0, 10.0, 9.0, 2.0, 1.0, 1.0]</pre></td>
+</tr>
+</table>
+</div>
+<p class="header studentFiles">Submitted files</p>
+<div class="studentFiles">
+<p class="caption">StudentGradesDescendingOrder.java:</p>
+<table class="file"><tr><td><pre><span class="linenumber">  1</span>
+<span class="linenumber">  2</span>
+<span class="linenumber">  3</span>
+<span class="linenumber">  4</span>
+<span class="linenumber">  5</span>
+<span class="linenumber">  6</span>
+<span class="linenumber">  7</span>
+<span class="linenumber">  8</span>
+<span class="linenumber">  9</span>
+<span class="linenumber"> 10</span>
+<span class="linenumber"> 11</span>
+<span class="linenumber"> 12</span>
+<span class="linenumber"> 13</span>
+<span class="linenumber"> 14</span>
+<span class="linenumber"> 15</span>
+<span class="linenumber"> 16</span>
+<span class="linenumber"> 17</span>
+<span class="linenumber"> 18</span>
+<span class="linenumber"> 19</span>
+<span class="linenumber"> 20</span>
+<span class="linenumber"> 21</span>
+<span class="linenumber"> 22</span>
+<span class="linenumber"> 23</span>
+<span class="linenumber"> 24</span>
+<span class="linenumber"> 25</span>
+<span class="linenumber"> 26</span>
+<span class="linenumber"> 27</span>
+<span class="linenumber"> 28</span>
+<span class="linenumber"> 29</span>
+<span class="linenumber"> 30</span>
+<span class="linenumber"> 31</span>
+<span class="linenumber"> 32</span>
+<span class="linenumber"> 33</span>
+<span class="linenumber"> 34</span>
+<span class="linenumber"> 35</span>
+<span class="linenumber"> 36</span>
+<span class="linenumber"> 37</span>
+<span class="linenumber"> 38</span>
+<span class="linenumber"> 39</span>
+<span class="linenumber"> 40</span>
+<span class="linenumber"> 41</span>
+</pre></td><td><pre>import java.util.*;
+
+/********************************************************
+ *                                                      * 
+ * PROBLEM:                                             *
+ *                                                      *
+ * Complete the design of the function called           *
+ * getGradesInDescendingOrder that consumes an array of *
+ * grades and produces the grades in descending order.  *
+ *                                                      *
+ * see examples wrapped in check-expect.                *
+ *  -with the form: @check_expect (({in}) -&gt; (out))     *
+ *                                                      *
+ * @author Henrique Rebelo                              *
+ ********************************************************/
+public class StudentGradesDescendingOrder {
+    
+	/**
+	 * Examples:
+	 * @check_expect (({new double[] {10}})                 -&gt; (double[]{10}))
+	 * @check_expect (({new double[] {0, 10}})              -&gt; (double[]{10, 0}))
+	 * @check_expect (({new double[] {2, 8, 9, 10}})        -&gt; (double[]{10, 9, 8, 2}))
+	 * @check_expect (({new double[] {5, 9, 1, 2, 3}})      -&gt; (double[]{9, 5, 3, 2, 1}))
+	 * @check_expect (({new double[] {10, 9, 10, 1, 2, 1}}) -&gt; (double[]{10, 10, 9, 2, 1, 1}))
+	 */  
+	public static double [] getGradesInDescendingOrder(double [] grades) {
+	   // this should work:	Arrays.sort(grades, Collections.reverseOrder());
+      
+      // sort and reverse
+      Arrays.sort(grades);
+      int size = grades.length;
+      double temp; 
+      for (int i = 0; i &lt; size / 2; i++) { 
+         temp = grades[i]; 
+         grades[i] = grades[size - i - 1]; 
+         grades[size - i - 1] = temp; 
+      }
+      
+		return grades;
+	}
+}
+</pre></td></tr></table>
+</div>
+<p class="header score">Score</p>
+<div class="score">
+<p class="score">5/5</p>
+</div>
+<div class="footnotes"><div class="footnote">2020-11-04T21:22:02Z</div>
+</div>
+</body></html>
